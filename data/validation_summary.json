@@ -1,0 +1,419 @@
+{
+  "passed": [
+    {
+      "test": "PK unique: products.product_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: skus.sku_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: locations.location_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: inventory_balances.balance_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: inventory_movements.movement_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: orders.order_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: order_lines.order_line_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: reservations.reservation_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: shipments.shipment_id",
+      "detail": ""
+    },
+    {
+      "test": "PK unique: replenishment_rules.rule_id",
+      "detail": ""
+    },
+    {
+      "test": "SKU product FK",
+      "detail": ""
+    },
+    {
+      "test": "Location parent FK",
+      "detail": ""
+    },
+    {
+      "test": "Balance SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "Balance location FK",
+      "detail": ""
+    },
+    {
+      "test": "Movement SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "Movement location FK",
+      "detail": ""
+    },
+    {
+      "test": "Order fulfillment location FK",
+      "detail": ""
+    },
+    {
+      "test": "OrderLine order FK",
+      "detail": ""
+    },
+    {
+      "test": "OrderLine SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "OrderLine allocated location FK",
+      "detail": ""
+    },
+    {
+      "test": "Reservation order FK",
+      "detail": ""
+    },
+    {
+      "test": "Reservation line FK",
+      "detail": ""
+    },
+    {
+      "test": "Reservation SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "Reservation location FK",
+      "detail": ""
+    },
+    {
+      "test": "Shipment order FK",
+      "detail": ""
+    },
+    {
+      "test": "Shipment source location FK",
+      "detail": ""
+    },
+    {
+      "test": "Shipment destination location FK",
+      "detail": ""
+    },
+    {
+      "test": "Shipment SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "Rule SKU FK",
+      "detail": ""
+    },
+    {
+      "test": "Rule location FK",
+      "detail": ""
+    },
+    {
+      "test": "SKU nomenclature",
+      "detail": ""
+    },
+    {
+      "test": "Location nomenclature",
+      "detail": ""
+    },
+    {
+      "test": "Order nomenclature",
+      "detail": ""
+    },
+    {
+      "test": "Movement nomenclature",
+      "detail": ""
+    },
+    {
+      "test": "Shipment nomenclature",
+      "detail": ""
+    },
+    {
+      "test": "Movement enums",
+      "detail": ""
+    },
+    {
+      "test": "Reservation lifecycle enums",
+      "detail": ""
+    },
+    {
+      "test": "Order lifecycle enums",
+      "detail": ""
+    },
+    {
+      "test": "Shipment lifecycle enums",
+      "detail": ""
+    },
+    {
+      "test": "Shipment type enums",
+      "detail": ""
+    },
+    {
+      "test": "Supplier receipts have destination and receipt timestamp",
+      "detail": ""
+    },
+    {
+      "test": "Location enums",
+      "detail": ""
+    },
+    {
+      "test": "One balance per SKU-location",
+      "detail": ""
+    },
+    {
+      "test": "One replenishment rule per SKU-location",
+      "detail": ""
+    },
+    {
+      "test": "Rule coverage for every balance",
+      "detail": ""
+    },
+    {
+      "test": "Every order has at least one line",
+      "detail": ""
+    },
+    {
+      "test": "Order totals equal order-line sums",
+      "detail": ""
+    },
+    {
+      "test": "Reservation parent attributes agree",
+      "detail": ""
+    },
+    {
+      "test": "Reservation expiry after reservation creation",
+      "detail": ""
+    },
+    {
+      "test": "Active reservations have future expiry",
+      "detail": ""
+    },
+    {
+      "test": "Movement order references resolve",
+      "detail": ""
+    },
+    {
+      "test": "Movement order FK column resolves",
+      "detail": ""
+    },
+    {
+      "test": "Movement order FK column populated",
+      "detail": ""
+    },
+    {
+      "test": "Movement reservation references resolve",
+      "detail": ""
+    },
+    {
+      "test": "Movement reservation FK column resolves",
+      "detail": ""
+    },
+    {
+      "test": "Movement reservation FK column populated",
+      "detail": ""
+    },
+    {
+      "test": "Movement shipment references resolve",
+      "detail": ""
+    },
+    {
+      "test": "Movement shipment FK column resolves",
+      "detail": ""
+    },
+    {
+      "test": "Movement shipment FK column populated",
+      "detail": ""
+    },
+    {
+      "test": "Receipt movements trace to supplier receipt shipments",
+      "detail": ""
+    },
+    {
+      "test": "Opening balances represented by opening events",
+      "detail": ""
+    },
+    {
+      "test": "All balance keys represented in movement ledger",
+      "detail": ""
+    },
+    {
+      "test": "Ledger reconciliation: on_hand",
+      "detail": ""
+    },
+    {
+      "test": "Ledger reconciliation: reserved",
+      "detail": ""
+    },
+    {
+      "test": "Ledger reconciliation: blocked",
+      "detail": ""
+    },
+    {
+      "test": "Ledger reconciliation: in_transit_in",
+      "detail": ""
+    },
+    {
+      "test": "Ledger reconciliation: in_transit_out",
+      "detail": ""
+    },
+    {
+      "test": "No negative physical stock",
+      "detail": ""
+    },
+    {
+      "test": "No negative reserved/blocked/inbound",
+      "detail": ""
+    },
+    {
+      "test": "Blocked stock does not exceed on-hand",
+      "detail": ""
+    },
+    {
+      "test": "Every reservation has one hold movement",
+      "detail": ""
+    },
+    {
+      "test": "Reservation hold quantities match rows",
+      "detail": ""
+    },
+    {
+      "test": "Released reservations have release movement",
+      "detail": ""
+    },
+    {
+      "test": "Active reservations have no release movement",
+      "detail": ""
+    },
+    {
+      "test": "Shipped order lines trace to sale movements",
+      "detail": ""
+    },
+    {
+      "test": "Internal transfers have distinct locations",
+      "detail": ""
+    },
+    {
+      "test": "Transfer dispatch/receipt lifecycle events",
+      "detail": ""
+    },
+    {
+      "test": "Approved inbound matches open transfer policy",
+      "detail": ""
+    },
+    {
+      "test": "ATP formula exact",
+      "detail": ""
+    },
+    {
+      "test": "Order event FK",
+      "detail": ""
+    },
+    {
+      "test": "Reservation event FK",
+      "detail": ""
+    },
+    {
+      "test": "Every order has event history",
+      "detail": ""
+    },
+    {
+      "test": "Every reservation has event history",
+      "detail": ""
+    },
+    {
+      "test": "Order event history ends at current status",
+      "detail": ""
+    },
+    {
+      "test": "Reservation event history ends at current status",
+      "detail": ""
+    },
+    {
+      "test": "Required edge cases labelled",
+      "detail": ""
+    },
+    {
+      "test": "Ground truth separate from operational features",
+      "detail": ""
+    },
+    {
+      "test": "Fixture labels not injected into clean balances",
+      "detail": ""
+    },
+    {
+      "test": "Overselling and expired-reservation cases included",
+      "detail": ""
+    },
+    {
+      "test": "Shipment dates ordered",
+      "detail": ""
+    },
+    {
+      "test": "Received shipments have received_at",
+      "detail": ""
+    },
+    {
+      "test": "No duplicate order lines",
+      "detail": ""
+    },
+    {
+      "test": "Full-scale SKU target",
+      "detail": ""
+    },
+    {
+      "test": "Full-scale location target",
+      "detail": ""
+    },
+    {
+      "test": "Full-scale movement target",
+      "detail": ""
+    },
+    {
+      "test": "Full-scale order target",
+      "detail": ""
+    },
+    {
+      "test": "Manifest row counts match files",
+      "detail": ""
+    },
+    {
+      "test": "Manifest checksum matches CSV files",
+      "detail": ""
+    }
+  ],
+  "failed": [],
+  "passed_count": 98,
+  "failed_count": 0,
+  "total_count": 98,
+  "pass_rate_pct": 100.0,
+  "scale": "full",
+  "seed": 20261022,
+  "counts": {
+    "products": 2500,
+    "skus": 5000,
+    "locations": 100,
+    "inventory_balances": 20000,
+    "inventory_movements": 1000000,
+    "orders": 50000,
+    "order_lines": 99878,
+    "reservations": 53518,
+    "shipments": 107400,
+    "replenishment_rules": 20000,
+    "order_events": 100000,
+    "reservation_events": 90908,
+    "ground_truth": 6,
+    "anomaly_fixtures": 6
+  }
+}

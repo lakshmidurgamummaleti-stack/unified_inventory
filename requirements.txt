@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.0
+streamlit>=1.35
+plotly>=5.20
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pytest>=8.0

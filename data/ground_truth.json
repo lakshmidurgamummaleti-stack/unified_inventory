@@ -1,0 +1,62 @@
+[
+  {
+    "scenario_id":"CASE-001",
+    "issue_type":"balance_mismatch",
+    "entity_type":"balance",
+    "entity_id":"BAL-SKU-000001-LOC-000001",
+    "observed_condition":"ledger_on_hand=100;reported_on_hand=112",
+    "expected_action":"reject snapshot; rebuild from movement ledger",
+    "severity":"high",
+    "fixture_only":true
+  },
+  {
+    "scenario_id":"CASE-002",
+    "issue_type":"reservation_exceeds_available",
+    "entity_type":"reservation",
+    "entity_id":"RES-ORD-2026-000004-01",
+    "observed_condition":"requested_qty=999;available_qty=3",
+    "expected_action":"reject excess reservation or backorder remainder",
+    "severity":"high",
+    "fixture_only":true
+  },
+  {
+    "scenario_id":"CASE-003",
+    "issue_type":"fulfilled_from_blocked",
+    "entity_type":"order",
+    "entity_id":"ORD-2026-000001",
+    "observed_condition":"allocated_qty=5;blocked_qty=5",
+    "expected_action":"prevent allocation from blocked stock; route to alternate location",
+    "severity":"high",
+    "fixture_only":true
+  },
+  {
+    "scenario_id":"CASE-004",
+    "issue_type":"premature_transfer_count",
+    "entity_type":"shipment",
+    "entity_id":"SHP-2026-037725",
+    "observed_condition":"status=in_transit;destination_on_hand_includes_transfer=true",
+    "expected_action":"keep destination quantity in inbound bucket until receipt",
+    "severity":"medium",
+    "fixture_only":true
+  },
+  {
+    "scenario_id":"CASE-005",
+    "issue_type":"overselling_attempt",
+    "entity_type":"order",
+    "entity_id":"ORD-2026-000002",
+    "observed_condition":"requested_qty=50;available_to_promise=4",
+    "expected_action":"reject or partially backorder; never create negative stock",
+    "severity":"high",
+    "fixture_only":true
+  },
+  {
+    "scenario_id":"CASE-006",
+    "issue_type":"expired_reservation",
+    "entity_type":"reservation",
+    "entity_id":"RES-ORD-2026-000035-01",
+    "observed_condition":"status=active;expires_at<as_of",
+    "expected_action":"emit reservation_release and free reserved units",
+    "severity":"high",
+    "fixture_only":true
+  }
+]

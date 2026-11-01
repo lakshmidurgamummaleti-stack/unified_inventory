@@ -1,0 +1,44 @@
+{
+  "project": "Unified Inventory Control Tower",
+  "seed": 20261022,
+  "scale": "full",
+  "as_of": "2026-10-31T00:00:00+00:00",
+  "counts": {
+    "products": 2500,
+    "skus": 5000,
+    "locations": 100,
+    "inventory_balances": 20000,
+    "inventory_movements": 1000000,
+    "orders": 50000,
+    "order_lines": 99878,
+    "reservations": 53518,
+    "shipments": 107400,
+    "replenishment_rules": 20000,
+    "order_events": 100000,
+    "reservation_events": 90908,
+    "ground_truth": 6,
+    "anomaly_fixtures": 6
+  },
+  "sha256": {
+    "anomaly_fixtures.csv": "feced9cd70950e80c3f0785c74958ad2474f6c8d9a41e48c2a3abe6ad2ff4a5d",
+    "ground_truth.csv": "feced9cd70950e80c3f0785c74958ad2474f6c8d9a41e48c2a3abe6ad2ff4a5d",
+    "inventory_balances.csv": "5fbf5155632017bf6cec42db4ee0daa2f4e0b0ce6c6a5b84ac6ce0856a22dd09",
+    "inventory_movements.csv": "5b3bc4092876f033dc6f4617a8fd2c1fd62a61bcc07dfa1d8a676348263f96e5",
+    "locations.csv": "be50184de3652fa8fdf07c3f20aa731ce7137823d27c54d88420fa9d02856b04",
+    "order_events.csv": "02b6864bbc4c9dc6bcbd88ed677d56c9ab1d99a77de3440a166d82f20e95e044",
+    "order_lines.csv": "055938ecf1418d46ae28736163d1af6768f2a6556ec105ed8f8af8a15ca2a828",
+    "orders.csv": "fe284e1bfed22823ca033d9ef29ae790a496fa190822597116ce416447603dc6",
+    "products.csv": "1be434e72356094444bab74fc5c3e38b81beaf9c17ce384de9ad27303f7fb191",
+    "replenishment_rules.csv": "61fb19bc082a5dbea7e998db63377ccbbbe621a8bfe63aa7fc91ba7f933fc5c9",
+    "reservation_events.csv": "843f3138bd561b99ccfee9ca3fc6b5c33d5f63c4b25a374efb8c2a6f46427d3e",
+    "reservations.csv": "6097fff7fc8b6f1b4063a715774c5b2f50cf3071c3dbe44f1c112e31eab9cbe6",
+    "shipments.csv": "36720af5b0e71744c2d7c7693dfed2ae39ba5ba6904d2c40e6780ae3186a4f12",
+    "skus.csv": "89b7c0e2298a830d86195229b3c4790706519d330ca5248c822ab79f095e931e"
+  },
+  "provenance": "100% synthetic; no external data",
+  "business_rules": {
+    "atp": "max(0,on_hand-reserved-blocked-safety_stock_units-channel_buffer_units+approved_inbound)",
+    "approved_inbound": "open transfer ETA within replenishment_rule.inbound_policy_days",
+    "reservation_expiry": "expired reservations are released with an immutable reservation_release movement"
+  }
+}
